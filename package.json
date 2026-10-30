@@ -1,0 +1,60 @@
+{
+  "name": "dsh-coros-gui",
+  "version": "0.1.0",
+  "description": "COROS training data inside DeepSeek Harness: browser OAuth login plus COROS MCP tools available in conversation.",
+  "type": "module",
+  "license": "MIT",
+  "author": "jeholfenq",
+  "homepage": "https://github.com/ppxinashin/dsh-coros-gui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppxinashin/dsh-coros-gui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ppxinashin/dsh-coros-gui/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "coros",
+    "mcp",
+    "training"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0"
+  },
+  "icon": "./icon/icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon/icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "icon",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "scripts": {
+    "check": "node --check lib/coros-engine.js && node --check lib/index.js && node --check lib/client.js",
+    "test": "node test/engine.test.mjs"
+  }
+}

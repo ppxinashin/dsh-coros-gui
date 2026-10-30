@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "COROS Training Assistant",
+    "description": "Query COROS activities, health, training load and plans right inside the conversation, with browser OAuth login."
+  }
+}

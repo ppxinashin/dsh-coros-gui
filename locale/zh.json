@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "COROS 训练助手",
+    "description": "在对话中直接查询 COROS 的活动、健康、训练负荷与训练计划，支持浏览器 OAuth 登录。"
+  }
+}
