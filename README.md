@@ -22,7 +22,7 @@
 
 ## 安装
 
-要求：DeepSeek Harness **0.2.x**（在 0.2.1-rc.3 上完成端到端验证）。
+要求：DeepSeek Harness **0.2.x**。已在 0.2.1-rc.3 上用真实 COROS 账号完成登录与授权，登录后成功注册并可用 34 个 COROS 工具。
 
 ### 方式一：从本地目录安装（开发/自用）
 
@@ -110,7 +110,7 @@ Web 半手写 `window.__ModuleLoader__.load({ id, factory })` bundle，无构建
 A DeepSeek Harness plugin that connects your COROS training data to the conversation.
 One browser OAuth login, then COROS MCP tools are registered as `coros_*` tools for the agent,
 plus a native settings page / quick panel for login, region selection, status and tool browsing.
-Tokens stay local at `$DSH_HOME/coros-gui/state.json` (0600). Requires DSH 0.2.x (verified on 0.2.1-rc.3).
+Tokens stay local at `$DSH_HOME/coros-gui/state.json` (0600). Requires DSH 0.2.x; verified on 0.2.1-rc.3 with a real COROS account (34 tools registered after login).
 
 ## License
 

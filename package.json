@@ -38,6 +38,7 @@
     "icon",
     "cordis.patch.yml",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "dsh": {
